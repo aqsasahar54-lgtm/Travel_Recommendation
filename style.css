@@ -1,0 +1,607 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #ffffff;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 70px;
+    background-color: #092f3d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    position: relative;
+    z-index: 100;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background-color: white;
+    color: #092f3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+
+/* Navigation */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #18b8ad;
+}
+
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.search-area {
+    width: 390px;
+    height: 44px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 4px 6px;
+}
+
+#searchInput {
+    flex: 1;
+    height: 36px;
+    border: none;
+    outline: none;
+    padding: 0 13px;
+    font-size: 14px;
+    border-radius: 20px;
+}
+
+.search-area button {
+    border: none;
+    background-color: #108c83;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 18px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.search-area button:hover {
+    background-color: #086c65;
+}
+
+
+/* =========================
+   HOME HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 70px);
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1800&q=90");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 75px 8%;
+
+    position: relative;
+}
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links {
+    position: absolute;
+    left: 20px;
+    top: 180px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    color: #18b8ad;
+}
+
+
+/* =========================
+   HOME INTRODUCTION
+========================= */
+
+.intro {
+    width: 480px;
+}
+
+.intro h1 {
+    font-size: 48px;
+    line-height: 1.05;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+}
+
+.intro p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.book-btn {
+    background-color: #108c83;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.book-btn:hover {
+    background-color: #086c65;
+}
+
+
+/* =========================
+   SEARCH RESULTS
+========================= */
+
+#resultsSection {
+    width: 85%;
+    margin: 30px auto 0;
+    padding-bottom: 50px;
+}
+
+#resultsTitle {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+/* =========================
+   RECOMMENDATION CARDS
+========================= */
+
+#recommendations {
+    display: grid;
+
+    /* 3 cards in one row */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+
+/* Card */
+
+.recommendation-card {
+    background-color: #ffffff;
+    color: #222222;
+
+    width: 100%;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.30);
+
+    text-align: left;
+
+    transition: transform 0.3s ease;
+}
+
+.recommendation-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* Card Image */
+
+.recommendation-card img {
+    width: 100%;
+
+    height: 120px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Card Heading */
+
+.recommendation-card h2 {
+    color: #222222;
+
+    font-size: 16px;
+
+    margin: 8px 10px 5px;
+}
+
+
+/* Card Description */
+
+.recommendation-card p {
+    color: #555555;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    margin: 0 10px 10px;
+}
+
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page {
+    min-height: calc(100vh - 70px);
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.38),
+            rgba(0, 0, 0, 0.38)
+        ),
+        url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1800&q=90");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 70px 8%;
+
+    position: relative;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-content h1 {
+    font-size: 55px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.about-content > p {
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* Company information */
+
+.company-box {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.company-box h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.company-box p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Team */
+
+.team-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.93);
+    color: #111;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.team-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-page {
+    min-height: calc(100vh - 70px);
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.30)
+        ),
+        url("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1800&q=90");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 80px;
+
+    position: relative;
+}
+
+
+/* Contact left side */
+
+.contact-info {
+    width: 50%;
+}
+
+.contact-info h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.contact-details p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+
+/* Contact form */
+
+.contact-form {
+    width: 480px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    padding: 30px;
+
+    border-radius: 8px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    color: white;
+
+    padding: 13px;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    margin-bottom: 20px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.contact-form textarea {
+    height: 130px;
+    resize: none;
+}
+
+.contact-form button {
+    width: 100%;
+
+    border: none;
+
+    background-color: #108c83;
+
+    color: white;
+
+    padding: 13px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.contact-form button:hover {
+    background-color: #086c65;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 12px 20px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-area {
+        width: 360px;
+    }
+
+    #recommendations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recommendation-card {
+        width: 100%;
+    }
+
+    .contact-page {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .search-area {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 50px 30px;
+    }
+
+    .intro {
+        width: 100%;
+    }
+
+    .intro h1 {
+        font-size: 38px;
+    }
+
+    #recommendations {
+        grid-template-columns: 1fr;
+    }
+
+    .recommendation-card {
+        width: 100%;
+    }
+
+    .about-content h1 {
+        font-size: 40px;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info h1 {
+        font-size: 45px;
+    }
+
+    .social-links {
+        display: none;
+    }
+}

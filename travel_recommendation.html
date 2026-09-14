@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelBloom - Travel Recommendation</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                ✈
+            </div>
+
+            <span>TravelBloom</span>
+
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="travel_recommendation.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter a destination or keyword"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+            <button id="clearBtn">
+                Clear
+            </button>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HOME -->
+
+    <main class="hero">
+
+        <!-- SOCIAL LINKS -->
+
+        <div class="social-links">
+
+            <a href="#">𝕏</a>
+
+            <a href="#">f</a>
+
+            <a href="#">◎</a>
+
+            <a href="#">▶</a>
+
+        </div>
+
+
+        <!-- INTRODUCTION -->
+
+        <section class="intro">
+
+            <h1>
+                EXPLORE DREAM
+                <br>
+                DESTINATION
+            </h1>
+
+            <p>
+                Welcome to TravelBloom, your travel recommendation
+                website. Explore beautiful destinations, discover
+                amazing beaches and temples, and find countries that
+                are perfect for your next journey.
+            </p>
+
+            <button class="book-btn">
+                Book Now
+            </button>
+
+        </section>
+
+
+        <!-- SEARCH RESULTS -->
+
+        <section id="resultsSection">
+
+            <h2 id="resultsTitle"></h2>
+
+            <div id="recommendations"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="travel_recommendation.js"></script>
+
+</body>
+
+</html>
